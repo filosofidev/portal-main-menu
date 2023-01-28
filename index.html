@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>Web Portal Digital</title>
+		<meta name="description" content="Website Resmi SMANSA Cepu / SMA Negeri 1 Cepu. Kabupaten Blora adalah salah satu Kabupaten di Jawa Tengah yang letaknya paling timur bagian tengah yang berbatasan dengan Kabupaten Bojonegoro Jawa Timur. Kabupaten Blora ini kaya akan potensi terutama potensi pertanian, potensi hutan jati, potensi pertambangan khususnya minyak bumi dan gas." />
+		<meta name="keywords" content="blora, blora.go.id, kabupaten blora, sekolah, sma negeri, sma negeri 1, sma negeri 1 cepu, smansa, smansa cepu, sman 1 cepu, sman1cepu, cepu, kota cepu, sma indonesia, sman indonesia, sma negeri indonesia,sma kabupaten blora, Website Sekolah, Blora, Mustika, Blora Mustika, Pemerintah, Pemkab Blora,Kabupaten, Kabupaten Blora, Jawa, Jawa Tengah, Indonesia, Sejarah, Samin, Minyak, Kecamatan, Sambong, Cepu, Banjarejo, Blora Kota, Bogorejo, Japah, Jati, Jepon, Kedung Tuban, Jiken, Kunduran, Kradenan, Randublatung, Ngawen, Tunjungan, Todanan, Kesenian, Kesenian Barong, Kesenian Tayub, Batugamping, Batulempung, Batupasirkuarsa, Bentonit, Phosphat, Marmer dan Onix, Sirtu, Gypsum, Minyak, Minyak Bumi, Tambang, Nglobo, Banyuabang, Trembes, Metes, Ngiono, Ngapus, Goa Terawang, Waduk, Waduk Bentolo, Pemandian Sayuran, Waduk Tempuran, Loko Wisata Cepu, Agrowisata, Agrowisata Temanjang, Gunung Manggir, Waduk Greneng, Taman, Budaya, Tirtanadi, Sate Blora, Info Blora, Info Kabupaten Blora" />
+		<meta name="author" content="Tangguh Filosofi Ugra Negarawan, S.T." />
+		<link rel="shortcut icon" href="http://sman1cepu.sch.id/wp-content/uploads/2018/07/ase.png"> 
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<p align="center"> <img src="images/logo.png" width="150" height="150"></p>
+			<header>
+				<h1>PORTAL DIGITAL<span>Terdepan Untuk Juara</span></h1>	
+			</header>
+			<div class="main clearfix">
+				<nav id="menu" class="nav">					
+					<ul>
+						<li>
+							<a href="http://presensi.sman1cepu.sch.id/pegawai/absensi/harian_peg">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-home"></i>
+								</span>
+								<span>Presensi Non ASN</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://elibrary.sman1cepu.sch.id">
+								<span class="icon"> 
+									<i aria-hidden="true" class="icon-services"></i>
+								</span>
+								<span>Perpustakaan</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://pilketos.sman1cepu.sch.id/">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-portfolio"></i>
+								</span>
+								<span>E-Pilketos</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://dapodik.sman1cepu.sch.id">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-team"></i>
+								</span>
+								<span>Dapodik</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://merdeka.sman1cepu.sch.id/">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-blog"></i>
+								</span>
+								<span>E-rapor Merdeka</span>
+							</a>
+						</li>
+						<li>
+							<a href="http://erapor.sman1cepu.sch.id">
+								<span class="icon">
+									<i aria-hidden="true" class="icon-contact"></i>
+								</span>
+								<span>E-rapor 2013</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		
+		<script>
+			
+			var changeClass = function (r,className1,className2) {
+				var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+				if( regex.test(r.className) ) {
+					r.className = r.className.replace(regex,' '+className2+' ');
+			    }
+			    else{
+					r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"),' '+className1+' ');
+			    }
+			    return r.className;
+			};	
+
+			
+			var menuElements = document.getElementById('menu');
+			menuElements.insertAdjacentHTML('afterBegin','<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true"><i aria-hidden="true" class="icon-menu"> </i> Klik Disini</button>');
+
+			
+			document.getElementById('menutoggle').onclick = function() {
+				changeClass(this, 'navtoogle active', 'navtoogle');
+			}
+
+			
+			document.onclick = function(e) {
+				var mobileButton = document.getElementById('menutoggle'),
+					buttonStyle =  mobileButton.currentStyle ? mobileButton.currentStyle.display : getComputedStyle(mobileButton, null).display;
+
+				if(buttonStyle === 'block' && e.target !== mobileButton && new RegExp(' ' + 'active' + ' ').test(' ' + mobileButton.className + ' ')) {
+					changeClass(mobileButton, 'navtoogle active', 'navtoogle');
+				}
+			}
+		</script>
+	</body>
+</html>
